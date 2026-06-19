@@ -12,27 +12,83 @@
 <body>
     <header>
         <div class="header-container">
-        <button id="dropbtn">
-            <svg viewBox="0 0 10 8" width="40" height="40">
-                <path d="M1 1h8M1 4h 8M1 7h8" stroke="#000" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-        </button>
-        <div id="menu">
-            <ul class="dropbtn-list">
-                <li><a href="#">Summary</a></li>
-                <li><a href="#">List of Songs</a></li>
-                <li><a href="#">Video</a></li>
-                <li><a href="#">Milestones</a></li>
-                <li><a href="#">Social & Cultural Impacts</a></li>
-                <li><a href="#">Prizes</a></li>
-                <li><a href="#">Dev/Contact me</a></li>
-            </ul>
-        </div>
-        <h1>All Things Must Pass</h1>
+            <button id="dropbtn" aria-controls="menu" aria-label="Toggle menu" aria-expanded="false">
+                <!-- aria-expanded indicates if the button content is currently expanded 'true' or collapsed 'false' and aria-controls that this button controls the menu -->
+                <svg viewBox="0 0 10 8" width="40" height="40" aria-hidden="true">
+                    <path d="M1 1h8M1 4h 8M1 7h8" stroke="#000" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+            <nav id="menu">
+                <ul class="dropbtn-list">
+                    <div><a href="#">Summary</a></div>
+                    <div><a href="#">List of Songs</a></div>
+                    <div><a href="#">Video</a></div>
+                    <div><a href="#">Milestones</a></div>
+                    <div><a href="#">Social & Cultural Impacts</a></div>
+                    <div><a href="#">Prizes</a></div>
+                    <div><a href="#">Dev/Contact me</a></div>
+                </ul>
+            </nav>
+            <h1 class="tracking-in-expand">All Things Must Pass</h1>
         </div>
     </header>
 
     <div class="divider"></div>
+
+    <div class="favourite-song">
+        <p>My favourite song from this album is: My Sweet Lord</p>
+    </div>
+
+    <!-- Section Album Cover and Summary -->
+    <section class="album-summary">
+        <div class="album">
+            <img src="estilos/AllThingsMustPass-cover.jpg"
+                alt="Cover of George Harrison's album 'All Things Must Pass'. George seating on a stool in his yard with four gnome statues around him."
+                width="420px" height="auto" margin-left="15px">
+        </div>
+
+        <div class="summary">
+            <h2>Summary</h2>
+        </div>
+    </section>
+
+    <section class="songs-list">
+        <h3>Tracklist</h3>
+        <h4><b>Disc 1</b></h4>
+
+        <div>1. I’d Have You Anytime</div>
+        <div>2. My Sweet Lord</div>
+        <div>3. Wah-Wah</div>
+        <div>4. Isn’t It A Pity</div>
+        <div>5. What Is Life</div>
+        <div>6. If Not For You</div>
+        <div>7. Behind That Locked Door</div>
+        <div>8. Let It Down</div>
+        <div>9. Run Of The Mill</div>
+        <div>10. I Live For You (2014 Remaster Bonus Track)</div>
+        <div>11. Beware Of Darkness (2014 Remaster Bonus Track)</div>
+        <div>12. Let It Down (2014 Remaster Bonus Track)</div>
+        <div>13. What Is Life (2014 Remaster Bonus Track)</div>
+        <div>14. My Sweet Lord (2000) (2014 Remaster Bonus Track)</div>
+
+
+        <h4><b>Disc 2</b></h4>
+
+        <div>1. Beware Of Darkness</div>
+        <div>Apple Scruffs</div>
+        <div>Ballad Of Sir Frankie Crisp (Let It Roll)</div>
+        <div>Awaiting On You All</div>
+        <div>All Things Must Pass</div>
+        <div>I Dig Love</div>
+        <div>Art Of Dying</div>
+        <div>Isn’t It A Pity (Version Two)</div>
+        <div>Hear Me Lord</div>
+        <div>It’s Johnny’s Birthday</div>
+        <div>Plug Me In</div>
+        <div>I Remember Jeep</div>
+        <div>Thanks For The Pepperoni</div>
+        <div>14. Out Of The Blue</div>
+    </section>
 
     <!-- Stars -->
     <div class="rating">

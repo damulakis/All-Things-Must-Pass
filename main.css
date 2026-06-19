@@ -32,7 +32,44 @@ p {
 h1 {
     font-size: 30px;
     font-family: 'ABC-light';
+
 }
+
+.tracking-in-expand {
+    -webkit-animation: tracking-in-expand 0.8s ease-out;
+    animation: tracking-in-expand 0.8s ease-out alternate both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.1em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 .header-container {
     display: flex;
@@ -77,6 +114,27 @@ h1 {
     margin: 0 1em;
     width: 100%;
 
+}
+
+/* ALBUM & SUMMARY */
+.album-summary {
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 18px;
+}
+
+/* SONGS LIST */
+.songs-list {
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px 10px;
+  grid-auto-flow: column;
 }
 
 /* STARS */

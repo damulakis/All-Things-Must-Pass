@@ -21,8 +21,8 @@
             <nav id="menu">
                 <ul class="dropbtn-list">
                     <div><a href="#">Summary</a></div>
-                    <div><a href="#">List of Songs</a></div>
-                    <div><a href="#">Video</a></div>
+                    <div><a href="#list-songs">List of Songs</a></div>
+                    <div><a href="#video">Video</a></div>
                     <div><a href="#">Milestones</a></div>
                     <div><a href="#">Social & Cultural Impacts</a></div>
                     <div><a href="#">Prizes</a></div>
@@ -35,8 +35,13 @@
 
     <div class="divider"></div>
 
+    <!-- FAV SONG & STAR DECO -->
     <div class="favourite-song">
-        <p>My favourite song from this album is: My Sweet Lord</p>
+        <span class="star" aria-hidden="true">
+            <span class="star-layer star-1"></span>
+            <span class="star-layer star-2"></span>
+        </span>
+        <p class="fav-song">My favourite song from this album is: My Sweet Lord</p>
     </div>
 
     <!-- Section Album Cover and Summary -->
@@ -47,12 +52,18 @@
                 width="420px" height="auto" margin-left="15px">
         </div>
 
-        <div class="summary">
-            <h2>Summary</h2>
+        <div class="summary shadow">
+            <div class="summary-title">
+                <h2>Summary</h2>
+            </div>
+            All Things Must Pass was released by Apple Records in November 1970, just seven months after the group's
+            breakup was confirmed.
+            The album's lyrics reflect both Harrison's notorious dark side as well as the spirituality he'd found in
+            his embrace of Hinduism.
         </div>
     </section>
 
-    <section class="songs-list">
+    <section class="songs-list" id="list-songs">
         <h3>Tracklist</h3>
         <h4><b>Disc 1</b></h4>
 
@@ -75,34 +86,89 @@
         <h4><b>Disc 2</b></h4>
 
         <div>1. Beware Of Darkness</div>
-        <div>Apple Scruffs</div>
-        <div>Ballad Of Sir Frankie Crisp (Let It Roll)</div>
-        <div>Awaiting On You All</div>
-        <div>All Things Must Pass</div>
-        <div>I Dig Love</div>
-        <div>Art Of Dying</div>
-        <div>Isn’t It A Pity (Version Two)</div>
-        <div>Hear Me Lord</div>
-        <div>It’s Johnny’s Birthday</div>
-        <div>Plug Me In</div>
-        <div>I Remember Jeep</div>
-        <div>Thanks For The Pepperoni</div>
+        <div>2. Apple Scruffs</div>
+        <div>3. Ballad Of Sir Frankie Crisp (Let It Roll)</div>
+        <div>4. Awaiting On You All</div>
+        <div>5. All Things Must Pass</div>
+        <div>6. I Dig Love</div>
+        <div>7. Art Of Dying</div>
+        <div>8. Isn’t It A Pity (Version Two)</div>
+        <div>9. Hear Me Lord</div>
+        <div>10. It’s Johnny’s Birthday</div>
+        <div>11. Plug Me In</div>
+        <div>12. I Remember Jeep</div>
+        <div>13. Thanks For The Pepperoni</div>
         <div>14. Out Of The Blue</div>
     </section>
 
-    <!-- Stars -->
-    <div class="rating">
-        <input value="5" name="rating" id="star5" type="radio">
-        <label for="star5"></label>
-        <input value="4" name="rating" id="star4" type="radio">
-        <label for="star4"></label>
-        <input value="3" name="rating" id="star3" type="radio">
-        <label for="star3"></label>
-        <input value="2" name="rating" id="star2" type="radio">
-        <label for="star2"></label>
-        <input value="1" name="rating" id="star1" type="radio">
-        <label for="star1"></label>
-    </div>
+    <aside id="video">
+        <div class="outside-card">
+            <div class="card-content">
+                <h2>Wah-Wah, George Harrison (2014 Remaster)</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NDVAQE7nplU?si=E59xOK_09c8Bx6SA"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+                <!-- Stars -->
+                <div class="rating">
+                    <input value="5" name="rating" id="star5" type="radio">
+                    <label for="star5"></label>
+                    <input value="4" name="rating" id="star4" type="radio">
+                    <label for="star4"></label>
+                    <input value="3" name="rating" id="star3" type="radio">
+                    <label for="star3"></label>
+                    <input value="2" name="rating" id="star2" type="radio">
+                    <label for="star2"></label>
+                    <input value="1" name="rating" id="star1" type="radio">
+                    <label for="star1"></label>
+                </div>
+
+            </div>
+        </div>
+    </aside>
+
+    <!-- MILESTONES -->
+    <section class="milestones-layout">
+        <div class="milestones-card">
+            <div class="content-1">
+                <div class="card-title-1">&#x1F342 1</div>
+                <p class="description-1">1º ex-Beatle com single solo no topo das paradas EUA e Reino Unido</p>
+            </div>
+        </div>
+
+        <div class="milestones-card">
+            <div class="content-2">
+                <div class="card-title-2">&#x1F342 7 semanas</div>
+                <p class="description-2">Sendo o álbum no topo das paradas nos EUA em 1971</p>
+            </div>
+        </div>
+
+        <div class="milestones-card">
+            <div class="content-3">
+                <div class="card-title-3">&#x1F342 $10M+</div>
+                <p class="description-3">Arrecadado pelo Concert for Bangladesh</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="quotation">
+        <div class="quote-card">
+            <div class="quote">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 330 307" height="80" width="80">
+                    <path fill="currentColor"
+                        d="M302.258 176.221C320.678 176.221 329.889 185.432 329.889 203.853V278.764C329.889 297.185 320.678 306.395 302.258 306.395H231.031C212.61 306.395 203.399 297.185 203.399 278.764V203.853C203.399 160.871 207.902 123.415 216.908 91.4858C226.323 59.1472 244.539 30.902 271.556 6.75027C280.562 -1.02739 288.135 -2.05076 294.275 3.68014L321.906 29.4692C328.047 35.2001 326.614 42.1591 317.608 50.3461C303.69 62.6266 292.228 80.4334 283.223 103.766C274.626 126.69 270.328 150.842 270.328 176.221H302.258ZM99.629 176.221C118.05 176.221 127.26 185.432 127.26 203.853V278.764C127.26 297.185 118.05 306.395 99.629 306.395H28.402C9.98126 306.395 0.770874 297.185 0.770874 278.764V203.853C0.770874 160.871 5.27373 123.415 14.2794 91.4858C23.6945 59.1472 41.9106 30.902 68.9277 6.75027C77.9335 -1.02739 85.5064 -2.05076 91.6467 3.68014L119.278 29.4692C125.418 35.2001 123.985 42.1591 114.98 50.3461C101.062 62.6266 89.6 80.4334 80.5942 103.766C71.9979 126.69 67.6997 150.842 67.6997 176.221H99.629Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="body-text">“It's being here now that's important. There's no past and there's no future. Time is
+                a
+                very misleading thing. All there is ever, is the now. We can gain experience from the past, but we can't
+                relive it; and we can hope for the future, but we don't know if there is one.”</div>
+            <div class="author"> — George Harrison<br>
+            </div>
+    </section>
 
 
 </body>

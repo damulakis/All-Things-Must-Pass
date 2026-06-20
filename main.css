@@ -14,12 +14,12 @@ body {
 /* FONTS */
 @font-face {
     font-family: 'ABC-1';
-    src: url(ABC-1.otf);
+    src: url(estilos/ABC-1.otf);
 }
 
 @font-face {
     font-family: 'ABC-light';
-    src: url(ABC-light.otf);
+    src: url(estilos/ABC-light.otf);
 }
 
 p {
@@ -116,30 +116,139 @@ h1 {
 
 }
 
+/* FAV & STAR */
+.favourite-song {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+}
+
+.fav-song {
+    margin: 0;
+}
+
+.star {
+    position: relative;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 2px #fff);
+}
+
+.star-layer {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 81%;
+    aspect-ratio: 1;
+    background-color: #f9e117;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
+            50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: rotate 6s linear infinite;
+}
+
+.star-2 {
+    width: 50%;
+    background-color: #fff183;
+    animation-delay: 1.3s;
+}
+
+@keyframes rotate {
+    to {
+        rotate: 360deg;
+    }
+}
+
+
+
 /* ALBUM & SUMMARY */
 .album-summary {
-  width: 100%;
+    width: 100%;
 
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px 18px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 18px;
 }
+
+.summary-title {
+    display: flex;
+    justify-items: left;
+    font-family: 'ABC-1';
+    font-size: larger;
+}
+
+.summary {
+    width: 880px;
+    height: 230px;
+    padding-left: 40px;
+    padding-right: 20px;
+
+    margin-right: 40vw;
+    font-family: 'ABC-light';
+
+    display: flex;
+    align-items: center;
+    background: ease;
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.shadow {
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+        0 0 0 2px rgb(190, 190, 190),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
 
 /* SONGS LIST */
-.songs-list {
-  width: 100%;
-
-  display: grid;
-  grid-template-rows: repeat(8, 1fr);
-  grid-template-columns: repeat(4, 1fr);
-  gap: 4px 10px;
-  grid-auto-flow: column;
+h3 {
+    font-size: larger;
 }
+
+.songs-list {
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px 10px;
+    grid-auto-flow: column;
+    justify-content: start;
+
+    font-family: 'ABC-light';
+    font-size: 14px;
+}
+
+/* ASIDE - YT VIDEO EMBEDDED */
+aside {
+    margin: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outside-card {
+    width: 720px;
+    height: 500px;
+    background-color: #eee2e2b0;
+    filter: sepia(10px);
+    border-radius: 20px;
+    border: 0.5px solid rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 /* STARS */
 .rating {
     display: inline-block;
+    margin-top: 16px;
 }
 
 .rating input {
@@ -163,4 +272,111 @@ h1 {
 .rating label:hover~label {
     color: #f0d908d3;
     transition: color 0.3s;
+}
+
+/* MILESTONES */
+.milestones-layout {
+    width: 100%;
+
+    display: flex;
+    gap: 20px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.milestones-card {
+    width: 300px;
+    height: 200px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.milestones-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.milestones-card:hover .content-1,
+.milestones-card:hover .content-2,
+.milestones-card:hover .content-3 {
+    transform: rotateX(0deg);
+    font-family: 'ABC-light'
+
+}
+
+.card-title-1,
+.card-title-2,
+.card-title-3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+    font-family: 'ABC-1';
+}
+
+.description-1,
+.description-2,
+.description-3 {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+}
+
+
+/* QUOTE */
+.quotation {
+    display: flex;
+    justify-content: center;
+    margin: 35px;
+}
+
+.quote-card {
+    width: 80vw;
+    height: 30vh;
+    background: #d8d8b2de;
+    font-family: inherit;
+    position: relative;
+    border-radius: 18px;
+    box-shadow: 2px#342f0b;
+}
+
+.quote {
+    color: #47694e;
+    padding-left: 30px;
+    position: relative;
+}
+
+.body-text {
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'ABC-1';
+    padding: 60px 40px 0;
+    color: #465512;
+    position: absolute;
+    top: 40px;
+    left: 1px;
+    line-height: 23px;
+}
+
+.author {
+    font-family: 'ABC-light';
+    margin-bottom: 5px;
+    opacity: 0;
+    transition: 0.5s;
+    margin: 10vh;
+    padding-left: 55vw;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.quote-card:hover .author {
+    opacity: 1;
 }

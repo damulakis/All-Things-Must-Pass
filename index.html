@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Site F.Bradesco</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="estilos/favicon-g.h" type="image/x-icon">
     <script src="app.js" defer></script>
 </head>
 
@@ -45,27 +46,78 @@
     </div>
 
     <!-- Section Album Cover and Summary -->
-    <section class="album-summary">
+    <section class="album-music-summary">
         <div class="album">
             <img src="estilos/AllThingsMustPass-cover.jpg"
                 alt="Cover of George Harrison's album 'All Things Must Pass'. George seating on a stool in his yard with four gnome statues around him."
                 width="420px" height="auto" margin-left="15px">
         </div>
 
+        <div class="music">
+            <div class="currentplaying">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="60" height="60" viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20" fill="#f44336"></circle>
+                    <polygon fill="#fff" points="21,29 29,24 21,19"></polygon>
+                    <path fill="none" stroke="#fff" stroke-miterlimit="10"
+                        d="M24,14c5.5,0,10,4.476,10,10s-4.476,10-10,10	s-10-4.476-10-10S18.5,14,24,14"></path>
+                </svg>
+                <p class="heading">Currently Playing</p>
+            </div>
+
+            <div class="something loader" data-src="estilos/Something-TheBeatles.mp3" data-cover="estilos/AbbeyRoad.jpg">
+                <div class="song">
+                    <p class="name">Something</p>
+                    <p class="artist">The Beatles</p>
+                </div>
+                <div class="albumcover"></div>
+                <div class="play"></div>
+            </div>
+
+            <div class="my-sweet-lord loader" data-src="estilos/MySweetLord-GeorgeHarrison.mp3"
+                data-cover="estilos/AllThingsMustPass-cover.jpg">
+                <div class="song">
+                    <p class="name">My Sweet Lord</p>
+                    <p class="artist">George Harrison</p>
+                </div>
+                <div class="albumcover"></div>
+                <div class="play"></div>
+            </div>
+
+            <div class="my-guitar loader" data-src="estilos/While-my Guitar-gently-weeps-GeorgeHarrison.mp3" data-cover="estilos/GeorgeHarrisonCover.jpg">
+                <div class="song">
+                    <p class="name">While My Guitar Gently Weeps</p>
+                    <p class="artist">George Harrison</p>
+                </div>
+                <div class="albumcover"></div>
+                <div class="play"></div>
+            </div>
+        </div>
+
         <div class="summary-container shadow">
             <div class="summary-title">
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40"
-                        viewBox="0 0 48 48">
-                        <path
-                            d="M 24 3 C 12.413858 3 3 12.413866 3 24 C 3 35.586134 12.413858 45 24 45 C 35.586142 45 45 35.586134 45 24 C 45 12.413866 35.586142 3 24 3 z M 24 5 C 34.505263 5 43 13.494744 43 24 C 43 34.505256 34.505263 43 24 43 C 13.494737 43 5 34.505256 5 24 C 5 13.494744 13.494737 5 24 5 z M 24 12.185547 C 23.159 12.185547 22.474609 12.863313 22.474609 13.695312 C 22.474609 14.535312 23.159 15.220703 24 15.220703 C 24.85 15.220703 25.541016 14.535312 25.541016 13.695312 C 25.541016 12.863312 24.85 12.185547 24 12.185547 z M 24 17.935547 C 23.305 17.935547 22.818359 18.454312 22.818359 19.195312 L 22.818359 33.757812 C 22.818359 34.498812 23.304 35.017578 24 35.017578 C 24.696 35.017578 25.181641 34.498813 25.181641 33.757812 L 25.181641 19.193359 C 25.181641 18.452359 24.695 17.935547 24 17.935547 z">
-                        </path>
-                    </svg><h2>Summary</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 48 48">
+                    <path
+                        d="M 24 3 C 12.413858 3 3 12.413866 3 24 C 3 35.586134 12.413858 45 24 45 C 35.586142 45 45 35.586134 45 24 C 45 12.413866 35.586142 3 24 3 z M 24 5 C 34.505263 5 43 13.494744 43 24 C 43 34.505256 34.505263 43 24 43 C 13.494737 43 5 34.505256 5 24 C 5 13.494744 13.494737 5 24 5 z M 24 12.185547 C 23.159 12.185547 22.474609 12.863313 22.474609 13.695312 C 22.474609 14.535312 23.159 15.220703 24 15.220703 C 24.85 15.220703 25.541016 14.535312 25.541016 13.695312 C 25.541016 12.863312 24.85 12.185547 24 12.185547 z M 24 17.935547 C 23.305 17.935547 22.818359 18.454312 22.818359 19.195312 L 22.818359 33.757812 C 22.818359 34.498812 23.304 35.017578 24 35.017578 C 24.696 35.017578 25.181641 34.498813 25.181641 33.757812 L 25.181641 19.193359 C 25.181641 18.452359 24.695 17.935547 24 17.935547 z">
+                    </path>
+                </svg>
+                <h2>Summary</h2>
             </div>
             <div class="summary-content">
-                All Things Must Pass was released by Apple Records in November 1970, just seven months after the group's
+                The beginning of All Things Must Pass was when Harrison visited America in November 1968 and
+                established
+                his long-lasting friendship with Bob Dylan, while staying in Woodstock. It coincided with a time
+                when
+                George’s songwriting output was on the rise and he was becoming self-assured.<i>(Source:
+                    udiscovermusic.com)</i>.
+                <div class="spacer"></div>
+                The album was released by Apple Records in November 1970, just seven months after the group's
                 breakup was confirmed.
-                The album's lyrics reflect both Harrison's notorious dark side as well as the spirituality he'd found in
+                The lyrics reflect both Harrison's notorious dark side as well as the spirituality he'd found in
                 his embrace of Hinduism.
+                <div class="spacer"></div>
+                <b>! All Things Must Pass became the most successful LP of George's career, certified seven times
+                    platinum.</b>
+                <div class="spacer"></div>
             </div>
         </div>
     </section>

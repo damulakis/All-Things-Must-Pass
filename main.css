@@ -174,11 +174,13 @@ h1 {
 
 /* MUSIC */
 .music {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.356);
     padding: 1em;
     padding-bottom: 1.1em;
     border-radius: 15px;
     margin: 1em;
+    box-shadow: 0 0 0 5px #a09d9d63;
+
 }
 
 .loader {
@@ -192,6 +194,7 @@ h1 {
     justify-content: right;
     border-radius: 10px;
     transition: .4s ease-in-out;
+    background-color: #6d606027;
 }
 
 .loader:hover {
@@ -262,13 +265,14 @@ h1 {
 .song {
     position: relative;
     transform: rotate(180deg);
-    margin-right: 1em;
+    margin-right: 0.3em;
     color: black;
     align-self: center;
+    font-size: 0.8em;
 }
 
 .artist {
-    font-size: 0.6em;
+    font-size: 0.9em;
 }
 
 @keyframes move6 {
@@ -412,13 +416,13 @@ aside {
 .milestones-card {
     width: 300px;
     height: 200px;
-    background-color: #f2f2f2;
+    background-color: #fbffbc;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    box-shadow: 0 0 0 5px #ffffff80;
+    box-shadow: 0 0 0 5px #a09d9d86;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -430,7 +434,6 @@ aside {
 .milestones-card:hover .content-1,
 .milestones-card:hover .content-2,
 .milestones-card:hover .content-3 {
-    transform: rotateX(0deg);
     font-family: 'ABC-light'
 
 }
